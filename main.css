@@ -3,6 +3,8 @@ h1, h2 {
 	text-align: center;
 	font-size: 64px;
 	padding: 12px 12px 50px 12px;
+	background-color: black;
+	color: white;
 }
 
 h2 {
@@ -14,6 +16,7 @@ li {
 	padding-left: 24px;
 	padding-bottom: 20px;
 	text-align: center;
+	padding: 20px 20px 20px 20px;
 }
 button{
 	font-size: 32px;
@@ -21,6 +24,11 @@ button{
 	
 }
 
+button:hover{
+	background-color: #ACFAF6;
+
+	
+}
 .button_no {
 	background-color: #49F2AC;
 	
@@ -28,9 +36,9 @@ button{
 }
 
 
-
 body {
 	font-family: "Comic Sans MS", sans-serif;
+	background-color: mintcream;
 }
 
 .button_yes {
