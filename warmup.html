@@ -58,18 +58,17 @@
 		return output;
 	}
 	function yesButtonOnClick(e) {
+			var question = chooseQuestion(list);
 			$('#questions_list').append(formatQuestion(question));
 			$('#questions_list li:last-child .button_no').click(noButtonOnClick);
 			$('#questions_list li:last-child .button_yes').click(yesButtonOnClick);
 	}
 	function noButtonOnClick(e) {
-			var question = chooseQuestion(list);
 			$('#questions_list').append("<li class='yes'>Yes, that is acceptable. Just.</li>");
 			//console.log("clickked!!!");
 
 		}
 	$(document).ready(function  () {
-			noButtonOnClick();
 			yesButtonOnClick();
 	});
 
