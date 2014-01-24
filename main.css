@@ -25,3 +25,7 @@ button{
 body {
 	font-family: "Comic Sans MS", sans-serif;
 }
+
+.webdings {
+    font-family: "Wingdings";
+}
