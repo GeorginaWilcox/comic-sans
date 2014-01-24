@@ -1,0 +1,27 @@
+h1, h2 {
+	text-align: center;
+	font-size: 64px;
+	padding: 12px 12px 50px 12px;
+}
+
+h2 {
+	font-size: 56px;
+}
+
+li {
+	font-size: 32px;
+	padding-left: 24px;
+	text-align: center;
+}
+button{
+	font-size: 32px;
+}
+
+.button_no {
+	background-color: #49F2AC;
+}
+
+
+body {
+	font-family: "Comic Sans MS", sans-serif;
+}

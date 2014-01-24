@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+	<script type="text/javascript">
+	var list = [ 
+	{
+		'question': "Did you build your website in Microsoft word?",
+		'answer1': 'Yes',
+		'answer2': "No",
+	},
+	{
+		'question': "Are you writing a comic book?",
+		'answer1': "Yes",
+		'answer2': "No",
+	},
+	{
+		'question': "Is wingdings the only other available font on your computer?",
+		'answer1': "Yes",
+		'answer2': "No",
+	},
+	];
+	function chooseQuestion(list) {
+		var length = list.length;
+		var x = Math.random();
+		var barrier = 1.0 / length;
+		var current = 0;
+		while (current < length) {
+			if (x < barrier) {
+				return list[current];
+			}
+			current += 1;
+			barrier += 1.0/length;
+		}
+	}
+	function formatQuestion(question) {
+		var output = "";
+		output += "<li>" + question.question + "<br><button>" + question.answer1;
+		output += "</button><button class='button_no'>" + question.answer2 + "</button>"; 
+
+		return output;
+	}
+	function yesButtonOnClick(e) {
+		$('#questions_list').append("<li class='yes'>Yes, that is acceptable. Just.</li>");
+	}
+	function noButtonOnClick(e) {
+			var question = chooseQuestion(list);
+			$('#questions_list').append(formatQuestion(question));
+			$('#questions_list li:last-child').click(noButtonOnClick);
+			//console.log("clickked!!!");
+
+		}
+	$(document).ready(function  () {
+		$('.button_no').click(noButtonOnClick);
+		$('.button_yes').click(yesButtonOnClick);
+	});
+
+	</script>
+</head>
+<body>
+<h1>Should I use comic sans?</h1>
+<ul id="questions_list">
+	<li>Are you writing a retro-style comic book?<br>
+		<button class="button_yes">Yes, actually I am.</button>
+		<button class="button_no">No I have a real job.</button>
+</ul>
+</body>
+</html>
