@@ -53,14 +53,13 @@
 	function noButtonOnClick(e) {
 			var question = chooseQuestion(list);
 			$('#questions_list').append(formatQuestion(question));
-			$('#questions_list li:last-child').click(noButtonOnClick);
+			$('#questions_list li:last-child .button_no').click(noButtonOnClick);
+			$('#questions_list li:last-child .button_yes').click(yesButtonOnClick);
 			//console.log("clickked!!!");
 
 		}
 	$(document).ready(function  () {
 		noButtonOnClick();
-		$('.button_no').click(noButtonOnClick);
-		$('.button_yes').click(yesButtonOnClick);
 	});
 
 	</script>
