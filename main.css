@@ -26,6 +26,9 @@ body {
 	font-family: "Comic Sans MS", sans-serif;
 }
 
+.button_yes {
+	background-color: #FF9696;
+}
 .webdings {
     font-family: "Wingdings";
 }

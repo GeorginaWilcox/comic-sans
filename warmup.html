@@ -42,7 +42,7 @@
 	}
 	function formatQuestion(question) {
 		var output = "";
-		output += "<li>" + question.question + "<br><button>" + question.answer1;
+		output += "<li>" + question.question + "<br><button class='button_yes'>" + question.answer1;
 		output += "</button><button class='button_no'>" + question.answer2 + "</button>"; 
 
 		return output;
@@ -58,6 +58,7 @@
 
 		}
 	$(document).ready(function  () {
+		noButtonOnClick();
 		$('.button_no').click(noButtonOnClick);
 		$('.button_yes').click(yesButtonOnClick);
 	});
@@ -67,9 +68,7 @@
 <body>
 <h1>Should I use comic sans?</h1>
 <ul id="questions_list">
-	<li>Are you writing a retro-style comic book?<br>
-		<button class="button_yes">Yes, actually I am.</button>
-		<button class="button_no">No I have a real job.</button>
+	
 </ul>
 </body>
 </html>
