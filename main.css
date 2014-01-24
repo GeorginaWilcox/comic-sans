@@ -1,3 +1,4 @@
+
 h1, h2 {
 	text-align: center;
 	font-size: 64px;
@@ -15,11 +16,15 @@ li {
 }
 button{
 	font-size: 32px;
+	
 }
 
 .button_no {
 	background-color: #49F2AC;
+	border-radius: 10px;
+	
 }
+
 
 
 body {
