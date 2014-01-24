@@ -57,13 +57,21 @@
 
 		return output;
 	}
-	function yesButtonOnClick(e) {
+function yesButtonOnClick(e) {
+			if (e) {
+					$(e.target).prop("disabled", true);
+					$(e.target).siblings().prop("disabled", true);
+				}
 			var question = chooseQuestion(list);
 			$('#questions_list').append(formatQuestion(question));
 			$('#questions_list li:last-child .button_no').click(noButtonOnClick);
 			$('#questions_list li:last-child .button_yes').click(yesButtonOnClick);
 	}
-	function noButtonOnClick(e) {
+function noButtonOnClick(e) {
+	if (e) {
+					$(e.target).prop("disabled", true);
+					$(e.target).siblings().prop("disabled", true);
+				}
 			$('#questions_list').append("<li class='no'>No.</li>");
 			//console.log("clickked!!!");
 
