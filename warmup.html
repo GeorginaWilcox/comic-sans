@@ -18,12 +18,22 @@
 	},
 	{
 		'question': "Is wingdings the only other available font on your computer?",
-        'answer1': "<span class='webdings'>Yes</span>",
+		'answer1': "<span class='webdings'>Yes</span>",
 		'answer2': "No.",
 	},
 	{
 		'question': "Is this for a serious business document?",
-		'answer1': "Yes",
+		'answer1': "No",
+		'answer2': "Yes",
+	},
+	{
+		'question': "Do you have money to burn, and would really like to pay some licensing fees?",
+		'answer1': "I have people for that.",
+		'answer2': "Nope nope nope.",
+	},
+	{
+		'question': "Is it for an invitation to a children's birthday party?",
+		'answer1': "Unfortunately, yes. Wish me luck.",
 		'answer2': "No",
 	},
 	];
@@ -48,18 +58,19 @@
 		return output;
 	}
 	function yesButtonOnClick(e) {
-		$('#questions_list').append("<li class='yes'>Yes, that is acceptable. Just.</li>");
-	}
-	function noButtonOnClick(e) {
-			var question = chooseQuestion(list);
 			$('#questions_list').append(formatQuestion(question));
 			$('#questions_list li:last-child .button_no').click(noButtonOnClick);
 			$('#questions_list li:last-child .button_yes').click(yesButtonOnClick);
+	}
+	function noButtonOnClick(e) {
+			var question = chooseQuestion(list);
+			$('#questions_list').append("<li class='yes'>Yes, that is acceptable. Just.</li>");
 			//console.log("clickked!!!");
 
 		}
 	$(document).ready(function  () {
-		noButtonOnClick();
+			noButtonOnClick();
+			yesButtonOnClick();
 	});
 
 	</script>
